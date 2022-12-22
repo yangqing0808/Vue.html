@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+    <!-- 容器 -->
+    <div class="root">
+      <h1>Hello,{{school.name2}}</h1>
+      <!-- 模板语法 -->
+      <h1>指令语法</h1>
+      <a v-bind:href="school.url">点我{{name2}}去百度</a>
+      <a :href="school.url">{{school.name2}}百度一下2</a>
+    </div>
+
+    <script type="text/javascript">
+      Vue.config.productionTip = false; //以阻止 vue 在启动时生成生产提示。
+      //创建Vue实例
+      new Vue({
+        el: ".root", //用于指定当前Vue实例
+        data: {
+          //data中用于存储数据，数据供el所制定的容器去使用，
+          name: "咖啡啡",
+          school: {
+            name2: "百度一下",
+            url: "https://www.baidu.com/",
+          },
+        },
+      });
+      
+
+
+
+
+
+    </script>
+  </body>
+</html>
